@@ -1,0 +1,164 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(tttbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #8f5cee;
+  background-color: #000;
+}
+
+.container1 {
+  background-color: rgba(0, 0, 0, 0.747);
+  width: 450px;
+  height: auto;
+  display: grid;
+  place-content: center;
+  border: #5f3ba141;
+  border-style: solid;
+  border-width: 0.5rem;
+  transition: 1.2s;
+}
+
+.container1:hover {
+  border: #8f5cee;
+  border-style: solid;
+  border-width: 0.5rem;
+}
+
+.container2 {
+  height: 15rem;
+  display: grid;
+  place-content: center;
+}
+
+.player {
+  font-size: 22px;
+}
+
+input {
+  background-color: #000;
+  color: #fff;
+}
+
+.container4 {
+  display: grid;
+  place-content: center;
+}
+
+#gameBoard {
+  background-color: #5e3ba1;
+  display: grid;
+  grid-template-columns: 6rem 6rem 6rem;
+  grid-template-rows: 6rem 6rem 6rem;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 20rem;
+  border: #5e3ba1;
+  border-style: solid;
+  border-width: 0.5rem;
+}
+
+#gameBoard span {
+  background-color: #000000;
+  display: grid;
+  place-content: center;
+  font-size: 5rem;
+  transition: 1.2s;
+}
+
+#gameBoard span:hover {
+  background-color: #8f5cee;
+  color: #000;
+}
+
+#gameBoard span.win {
+  background-color: #8f5cee;
+  color: #fff;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .container1 {
+    width: 100%;
+  }
+}
+
+.topTitle {
+  width: 400px;
+}
+
+.btnStart {
+  color: #5e3ba1;
+  border: 1px solid #5e3ba1;
+}
+.btnStart:hover {
+  background-color: #8f5cee;
+  border: 1px solid #5e3ba1;
+  color: #fff;
+}
+
+/* inputs: https://codepen.io/lucasyem/pen/ZEEYKdj*/
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form__field {
+  border: 0;
+  border-bottom: 2px solid #5e3ba1;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #5e3ba1;
+  padding: 7px 0;
+  background: transparent;
+  border-color: #5e3ba1;
+  transition: 0.5s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.5s;
+  font-size: 1rem;
+  color: #5e3ba1;
+}
+
+.form__field:focus {
+  color: #8f5cee;
+  padding-bottom: 6px;
+  border-color: #8f5cee;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.5s;
+  font-size: 1rem;
+  color: #8f5cee;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
